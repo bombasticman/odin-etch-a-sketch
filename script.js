@@ -4,10 +4,13 @@ function populate_the_screen() {
             const square = document.createElement("div")
             square.classList.add("square")
             document.getElementById("container").appendChild(square)
+            square.addEventListener("mouseover", () => {
+                console.log("test")
+                square.style.backgroundColor = "red"
+            })
         }
     }
 }
-
 
 
 populate_the_screen()
