@@ -5,11 +5,12 @@ body {
 #container {
     display: flex;
     flex-wrap: wrap;
-    background-color: grey;
+    background-color: black;
 }
 
 .square {
     height: 1px;
     width: 1px;
-    background-color: grey;
+    background-color: black;
+    opacity: 1;
 }

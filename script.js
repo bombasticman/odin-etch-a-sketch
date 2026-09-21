@@ -10,8 +10,10 @@ function populate_the_screen(size) {
             square.classList.add("square")
             board.appendChild(square)
             const color = random_color()
+            square.style.opacity = 1
             square.addEventListener("mouseover", () => {
                 square.style.backgroundColor = color
+                square.style.opacity = square.style.opacity - 0.1
             })
         }
     }
