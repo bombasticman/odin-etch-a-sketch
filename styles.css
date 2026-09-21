@@ -7,10 +7,11 @@ body {
     flex-wrap: wrap;
     background-color: grey;
     max-width: 16px;
+    max-height: 16px;
 }
 
 .square {
     height: 1px;
     width: 1px;
-    background-color: black;
+    background-color: grey;
 }

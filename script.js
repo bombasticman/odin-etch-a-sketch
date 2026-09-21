@@ -1,16 +1,29 @@
-function populate_the_screen() {
-    for (let column = 0; column < 16; column++) {
-        for (let row = 0; row < 16; row++) {
+function populate_the_screen(size) {
+    size = Number(size)
+    const board = document.getElementById("container")
+    board.replaceChildren()
+    for (let column = 0; column < size; column++) {
+        for (let row = 0; row < size; row++) {
             const square = document.createElement("div")
             square.classList.add("square")
-            document.getElementById("container").appendChild(square)
+            board.appendChild(square)
             square.addEventListener("mouseover", () => {
-                console.log("test")
                 square.style.backgroundColor = "red"
             })
         }
     }
 }
 
+function request_user_input() {
+    while(true) {
+        grid_size = Number(prompt("Please set grid size(MAX=1000)"))
+        if (grid_size < 1000) {
+            populate_the_screen(grid_size)
+            return false
+        }
+        
+    }
+}
 
-populate_the_screen()
+user_input_button = document.getElementById("user_input")
+user_input_button.addEventListener("click", request_user_input)
