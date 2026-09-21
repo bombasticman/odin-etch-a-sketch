@@ -2,6 +2,8 @@ function populate_the_screen(size) {
     size = Number(size)
     const board = document.getElementById("container")
     board.replaceChildren()
+    board.style.minWidth = size + "px"
+    board.style.maxWidth = size + "px"
     for (let column = 0; column < size; column++) {
         for (let row = 0; row < size; row++) {
             const square = document.createElement("div")

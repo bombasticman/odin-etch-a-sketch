@@ -6,8 +6,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color: grey;
-    max-width: 16px;
-    max-height: 16px;
 }
 
 .square {
