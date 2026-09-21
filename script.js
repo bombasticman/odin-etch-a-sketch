@@ -9,8 +9,9 @@ function populate_the_screen(size) {
             const square = document.createElement("div")
             square.classList.add("square")
             board.appendChild(square)
+            const color = random_color()
             square.addEventListener("mouseover", () => {
-                square.style.backgroundColor = "red"
+                square.style.backgroundColor = color
             })
         }
     }
@@ -25,6 +26,13 @@ function request_user_input() {
         }
         
     }
+}
+
+function random_color() {
+    const r = Math.floor(Math.random() * 256)
+    const g = Math.floor(Math.random() * 256)
+    const b = Math.floor(Math.random() * 256)
+    return `rgb(${r}, ${g}, ${b})`
 }
 
 user_input_button = document.getElementById("user_input")
